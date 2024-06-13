@@ -9,12 +9,16 @@
         "@schematics/angular:component": {
           "style": "scss"
         }
+        
+        
       },
+      
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
         "build": {
+        
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "dist/pianoapp",

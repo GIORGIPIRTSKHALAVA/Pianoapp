@@ -1,0 +1,43 @@
+.piano-covers {
+    text-align: center;
+  }
+  
+  .hit {
+    display: inline-block;
+    position: relative;
+    margin: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    transition: border-color 0.3s ease;
+  }
+
+  
+  .image img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+      }
+  
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        font-size: 30px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+  
+  .hit:hover .overlay {
+    opacity: 1;
+  }
+  

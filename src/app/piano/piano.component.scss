@@ -1,0 +1,69 @@
+$piano-key-width: 50px;
+$piano-key-height: 200px;
+$piano-black-key-width: 30px;
+
+.piano {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: #f2f2f2;
+  padding: 20px;
+
+
+  .key {
+    width: $piano-key-width;
+    height: $piano-key-height;
+    border: 1px solid #999;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease;
+
+    &.white {
+      background-color: #fff;
+
+      &:hover {
+        background-color: #e5e5e5;
+       
+        
+      }
+    }
+
+    &.black {
+      background-color: #333;
+      margin-left: -(($piano-black-key-width - $piano-key-width) / 2);
+      z-index: 1;
+
+      &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 60%;
+        background-color: #222;
+        top: 0;
+      }
+
+      &:hover {
+        background-color: #555;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 5px; // Add spacing between keys
+    }
+  }
+}
+
+audio {
+  display: none;
+
+}
+:host {
+  display: block;
+  height: 100vh;
+  background-image: url('https://cdn.pixabay.com/photo/2014/03/04/07/14/music-279332_1280.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+
